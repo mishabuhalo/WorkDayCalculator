@@ -17,6 +17,15 @@ namespace WorkDayCalculator
 
             for(int i=0; i < weekEnds.Length; i++)
             {
+                if (result > weekEnds[i].endDate)
+                    continue;
+
+                if(result > weekEnds[i].startDate && result <= weekEnds[i].endDate)
+                {
+                    result = result.AddDays(weekEnds[i].endDate.Subtract(result).TotalDays+1);
+                    continue;
+                }
+
                 if (result.AddDays(dayCount-1) < weekEnds[i].startDate)
                     return result.AddDays(dayCount-1);
                 else

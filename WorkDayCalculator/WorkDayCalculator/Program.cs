@@ -12,13 +12,12 @@ namespace WorkDayCalculator
         {
             DateTime startDate = new DateTime(2020, 4, 8);
             int count = 5;
-            WeekEnd[] weekends = new WeekEnd[5]
+            WeekEnd[] weekends = new WeekEnd[3]
             {
-                new WeekEnd(new DateTime(2020, 4, 9), new DateTime(2020, 4, 10)),
-                new WeekEnd(new DateTime(2020, 4, 12), new DateTime(2020, 4, 17)),
-                new WeekEnd(new DateTime(2020, 4, 18), new DateTime(2020, 4, 20)),
-                new WeekEnd(new DateTime(2020, 4, 21), new DateTime(2020, 4, 21)),
-                new WeekEnd(new DateTime(2020, 4, 25), new DateTime(2020, 4, 26)),
+                new WeekEnd(new DateTime(2020, 4, 6), new DateTime(2020, 4, 10)),
+                new WeekEnd(new DateTime(2020, 4, 13), new DateTime(2020, 4, 16)),
+                new WeekEnd(new DateTime(2020, 4, 17), new DateTime(2020, 4, 17))
+
             };
             DateTime result = new WorkDayCalculator().Calculate(startDate, count, weekends);
 
