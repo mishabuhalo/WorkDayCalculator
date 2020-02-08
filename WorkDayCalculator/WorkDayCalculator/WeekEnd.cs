@@ -13,7 +13,7 @@ namespace WorkDayCalculator
 
         public WeekEnd(DateTime StartDate, DateTime EndDate)
         {
-            this.startDate = startDate;
+            this.startDate = StartDate;
             this.endDate = EndDate;
         }
     }
