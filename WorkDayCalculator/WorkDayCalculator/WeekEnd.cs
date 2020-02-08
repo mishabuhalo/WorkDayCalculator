@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkDayCalculator
 {
-    class WeekEnd
+    public class WeekEnd
     {
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
