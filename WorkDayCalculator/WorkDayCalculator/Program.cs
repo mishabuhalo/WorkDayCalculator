@@ -10,15 +10,18 @@ namespace WorkDayCalculator
     {
         static void Main(string[] args)
         {
-            DateTime startDate = new DateTime(2017, 4, 21);
+            DateTime startDate = new DateTime(2020, 4, 8);
             int count = 5;
-            WeekEnd[] weekends = new WeekEnd[2]
+            WeekEnd[] weekends = new WeekEnd[5]
             {
-                new WeekEnd(new DateTime(2017, 4, 23), new DateTime(2017, 4, 25)),
-                new WeekEnd(new DateTime(2017, 4, 29), new DateTime(2017, 4, 29))
+                new WeekEnd(new DateTime(2020, 4, 9), new DateTime(2020, 4, 10)),
+                new WeekEnd(new DateTime(2020, 4, 12), new DateTime(2020, 4, 17)),
+                new WeekEnd(new DateTime(2020, 4, 18), new DateTime(2020, 4, 20)),
+                new WeekEnd(new DateTime(2020, 4, 21), new DateTime(2020, 4, 21)),
+                new WeekEnd(new DateTime(2020, 4, 25), new DateTime(2020, 4, 26)),
             };
             DateTime result = new WorkDayCalculator().Calculate(startDate, count, weekends);
-            //DateTime result = startDate.AddDays(tmpDate2.Subtract(tmpDate1).TotalDays+1);
+
             Console.WriteLine(result);
         }
     }
